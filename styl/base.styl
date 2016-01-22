@@ -1,0 +1,226 @@
+@import "reset"
+@import "font"
+
+body, html
+  background: #2a2a2a
+  width: 100%
+  height: 100%
+a
+  text-decoration: none
+  color: #fafafa
+header
+  zoom 1
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+section
+  zoom 1
+  text-align center
+  z-index -99
+
+.header
+  &_top
+    position relative
+    background rgba(25,25,25,0.8)
+
+  &_content
+    position: relative
+    color: #ebebeb
+    width: 100%
+    text-align: center
+    padding-bottom: 0
+
+  &_lang li a
+    text-decoration none
+    position: relative
+    margin:10px 10px 0 0px
+    float: right
+    font-size: 1.2em
+    z-index: 99
+
+  &_title
+    position: relative
+    color: #ebebeb
+    width: 200px
+    padding: 2% 4%
+
+  &_bottom
+    position relative
+    width 100%
+    background #2A2A2A
+    border-top: solid white 1px
+    color: #ebebeb
+    text-align: center
+
+._left
+  float left
+
+._right
+  float right
+
+._bottom
+  position relative
+  padding 35px 0 0 25px
+  max-width 250px
+
+  &_more
+    position: relative
+    margin: auto
+    text-align: center
+    width: 200px
+    padding-top 20px
+    ^[1] a
+      border-radius:5px
+      background-color: #ebebeb
+      display: block
+      text-decoration: none
+      color: black
+      padding: 10px
+    ^[1] a:hover
+      margin-top:-4px
+      padding: 12px
+      background-color: #fff
+
+#map
+  margin auto
+  width 450px
+  height 200px
+
+#price
+  background #1bbbbb
+  border-radius 2px
+  padding 5px
+  color #fafafa
+  font-size 2em
+  font(Dosis)
+
+.bar_icon
+  margin: auto
+  width: 90%
+  & i
+    border-radius: 5px
+    font-size: 3em
+    color: #dbdbdb
+    padding: 1.5% 2% 1.5% 2%
+    ^[1]:hover
+      position: relative
+      cursor: pointer
+      margin: -2.5% 0 0 0
+      color: #fff
+
+.welcom_sentence
+  margin: auto
+  font-size: 2.4em
+  width: 50%
+  font(Alegreya)
+  &::first-letter
+    font-size: 2.5em
+    font(Italianno)
+
+.title
+  font(Alegreya)
+  font-size: 3.5em
+
+#logo
+  width 150px
+  height 67 px
+.slogan
+  width 200px
+  font(Alegreya)
+  font-size: 1em
+
+.content
+  position relative
+  background rgba(255,255,255,.5)
+  padding 10px
+  text-align center
+  color white
+  margin 10px auto
+  & > div
+    display inline-block
+  &_contact
+    text-align left
+    width 150px
+
+.wallpaper
+  position fixed
+  @extend header
+  background: url('../assets/paris.jpeg') no-repeat
+  background-size: 100% 100%
+  opacity: 0.6
+
+.hidden
+  display none
+  z-index -9999
+
+
+//Section Info
+.info_menu
+  text-align center
+  margin auto
+  & .img_cadre
+    display: inline-block
+    margin: 20px 15px auto 0
+    width: 100px
+  & img
+    border-radius 5px
+    cursor: pointer
+    width 100px
+    height 100px
+.container
+  text-align center
+  margin auto
+  height 100%
+  width 100%
+  padding 2px 0
+
+.info
+  &_bg
+    position absolute
+    width 100%
+    height 100%
+    background-color rgba(33,33,33,0.5)
+    z-index -1
+  &_map
+    border-top solid #9a9A9A 1px
+    margin auto
+    padding-top 10px
+    max-width: 600px
+    color white
+    text-align center
+  &_map h2
+    padding 5px 0
+    margin-bottom 5px
+    border-bottom solid #9A9A9A 1px
+
+.menu
+  &_content
+    float left
+    font-size 1em
+    font(Dosis)
+    color #AbeeAB
+
+.form
+  &_itineraire
+    font-size 1.3em
+    margin 20px auto
+    background rgba(25,25,25,0.4)
+    padding: 2px 0
+  &_text
+    font(Dosis)
+    font-size 1em
+    width 240px
+    color #242020
+  &_button
+    font-size 1em
+    width 100px
+    color #fafafa
+
+.section_bg
+  position absolute
+  width 100%
+  height 100%
+  background url('../assets/508.jpg') no-repeat
+  background-size 100% 100%
+  z-index -2

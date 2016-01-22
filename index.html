@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+  <meta charset="utf-8">
+  <meta name="name" content="McarJ">
+  <meta name="description" content="VTC">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>McarJ</title>
+  <link href="./css/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/base.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Italianno|Alegreya+Sans' rel='stylesheet' type='text/css'>
+  <script src="./js/jquery-2.2.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <header class="header-standard container">
+    <div class="wallpaper">
+    </div>
+    <div class="header_top">
+      <div class="header_lang">
+        <ul>
+          <li><a href="#" id='fr'>fr</a></li>
+          <li><a href="#" id='en'>en</a></li>
+        </ul>
+      </div>
+      <div class="header_title">
+        <img id="logo" class="hidden" src="assets/logo.png" alt="logo" />
+        <h2 class="title">MCarJ</h2>
+        <p class="slogan">
+          Un slogan quelconque
+        </p>
+      </div>
+      <div class="header_content">
+        <p class="welcom_sentence">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        </p>
+        <form class="form_itineraire form-inline" action="javascript:calculer()" method="get">
+          <label for="origin" class="sr-only">Départ</label>
+          <input class="form-control form_text input-lg" type="text" required="true" name="origin" id="origin" placeholder="Départ">
+          <label class="sr-only" for="destination">Arrivée</label>
+          <input class="form-control form_text input-lg" type="text" required="true" name="destination" id="destination" placeholder="Arrivée">
+          <button class="btn btn-info form_button input-lg" type="submit" id='submit'>Simuler</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="content row">
+
+      <div id="map" class="col-md-4 col-md-push-3">
+        <p>Veuillez patienter pendant le chargement de la carte...</p>
+      </div>
+      <div class="content_contact">
+        <div id="price">
+          0 €
+        </div>
+        <div class="contact">
+          <p class='record'>
+            Reservation au
+          </p>
+          <i class='fa fa-phone'>: <span style="color: yellow">0123455678</span></i>
+          <br>
+          <i>@: <span>mcarj@gmail.com</span></i>
+        </p>
+      </div>
+
+    </div>
+    <div class="content_forfait col-md-4 col-md-pull-5">
+      <span>Forfait</span>
+      <p>
+        Paris - CDG : 47€ <br>
+        Paris - Orly : 30€
+      </p>
+    </div>
+    <div class="header_more">
+      <a class="hidden" href="#">Visiter</a>
+    </div>
+  </header>
+  <div class="header_bottom">
+    <div class="_left _bottom">
+      Copyright © 2015 M'Car'J
+    </div>
+    <div class="bar_icon">
+      <i class="fa fa-taxi" ></i>
+      <i class="fa fa-phone"></i>
+      <i class="fa fa-suitcase"></i>
+    </div>
+  </div>
+  <section class="Section_Info hidden">
+    <div class="section_bg">
+      <div class="container">
+        <div class="info_bg"></div>
+        <div class="info_menu">
+          <div class="img_cadre">
+            <a id="menu1" href="#" onclick="return false;"><img src="./assets/paris.jpeg" alt="img1" /></a>
+            <p>
+              menu 1
+            </p>
+          </div>
+          <div class="img_cadre">
+            <a id="menu2" href="#"><img src="./assets/paris.jpeg" alt="img2" /></a>
+            <p>
+              menu 2
+            </p>
+          </div>
+          <div class="img_cadre">
+            <a id="menu3" href="#"><img src="./assets/paris.jpeg" alt="img3" /></a>
+            <p>
+              menu 3
+            </p>
+          </div>
+          <!-- <form class="form_itineraire" action="" method="get">
+          <input class="form_text" type="text" name="origin" id="origin" placeholder="Départ">
+          <input class="form_text" type="text" name="destination" id="destination" placeholder="Arrivée">
+          <button class="btn-lg btn-info form_text" type="button" onclick="calculer()">Simuler</button>
+        </form> -->
+      </div>
+
+      <div class="info_content">
+        <div class="info_map">
+          <div id="menu1">
+            <h2>Menu 1</h2>
+            <div class="menu_content">
+              <p>
+                Tarif: 20€ <br>
+                Horaire: 2h <br>
+                Trajet: T - P - A <br>
+              </p>
+            </div>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55159.38280024421!2d2.348917350174321!3d48.8575159059329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sfr!2sfr!4v1452800569021" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+          </div>
+          <div id="menu2" class="hidden">
+            <h2>Menu 2</h2>
+            <div class="menu_content">
+              <p>
+                Tarif: 50€ <br>
+                Horaire: 2h <br>
+                Trajet: T - P - A <br>
+              </p>
+            </div>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55159.38280024421!2d2.348917350174321!3d48.8575159059329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sfr!2sfr!4v1452800569021" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+          </div>
+          <div id="menu3" class="hidden">
+            <h2>Menu 3</h2>
+            <div class="menu_content">
+              <p>
+                Tarif: 30€ <br>
+                Horaire: 2h <br>
+                Trajet: T - P - A <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDgf_VBcJI8E0Pa4xYBhjCLF9tnSu-ry-4&signed_in=false&libraries=places,geometry&language=fr"></script>
+<script type="text/javascript" src="./js/map.js"></script>
+<script type="text/javascript" src="./js/lang.js"></script>
+<script type="text/javascript">
+  var key = "AIzaSyDgf_VBcJI8E0Pa4xYBhjCLF9tnSu-ry-4";
+
+  function afficheMenu(id){
+    $('.info_map').children().addClass("hidden");
+    $('div#'+id).removeClass('hidden');
+
+  }
+  var translation;
+  $('div.header_lang a').click(function(e){translation = e.currentTarget.id; changeLang(translation)});
+  function changeLang(lang){
+
+    var langage;
+    if(lang == "en")
+      langage = _lang.en
+    else
+      langage = _lang.fr
+
+    // $('p').hasClass('en').each(function(i){console.log(i)});
+    $.each(langage, function(e, type){
+      if(e=="sentence"){
+        console.log(type);
+        $.each(type, function(i, val){
+          $(i).text(val);
+        })
+      }
+      if(e=="placeHolder"){
+        $.each(type, function(i, val){
+          $(i).attr("placeHolder", val);
+        })
+      }
+    });
+  }
+  $('.img_cadre a').click(function(e) {afficheMenu(e.currentTarget.id); return false});
+</script>
+</body>
+</html>
